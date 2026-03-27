@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bls6pqt8flug3" path="res://scenes/tile_map.tscn" id="2_ixamt"]
 [ext_resource type="Texture2D" uid="uid://tpq0ge2lruix" path="res://assets/Familiar Looking Rocket.png" id="3"]
 [ext_resource type="PackedScene" uid="uid://bul5fybv2rytg" path="res://scenes/Area Trigger.tscn" id="4_enfm1"]
+[ext_resource type="PackedScene" uid="uid://cx4vj5k1r8t0u" path="res://scenes/Life Counter.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/LevelIntro.tscn" id="6"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -21,7 +23,15 @@ texture = ExtResource("3")
 [node name="death_trigger" parent="." instance=ExtResource("4_enfm1")]
 position = Vector2(-29, 1112)
 scale = Vector2(10.1706, 0.6163)
+sceneName = "Level 1"
 
 [node name="win_trigger" parent="." instance=ExtResource("4_enfm1")]
-position = Vector2(1743, 394)
+position = Vector2(1662, 394)
+scale = Vector2(3, 3)
 sceneName = "Level 2"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LifeCounter" parent="CanvasLayer" instance=ExtResource("5")]
+
+[node name="LevelIntro" parent="." instance=ExtResource("6")]

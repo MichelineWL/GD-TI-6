@@ -1,0 +1,14 @@
+[gd_scene format=3]
+
+[ext_resource type="FontFile" path="res://assets/Fonts/CC Wild Words Roman.ttf" id="1"]
+[ext_resource type="Script" path="res://scripts/life_counter.gd" id="2"]
+
+[node name="LifeCounter" type="Label"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 32
+text = "Life: 3"
+script = ExtResource("2")
